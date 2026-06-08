@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mövenpick Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        
+        <section id="screen-main" class="screen active">
+            <div class="header-bg">
+                <div class="header-badge title-badge">
+                    <h1>Mövenpick Hotel</h1>
+                </div>
+                <div class="header-badge subtitle-badge">
+                    <p>Welcome to Mövenpick Hotel. Choose hotel services and send a booking request.</p>
+                </div>
+            </div>
+            
+            <div class="main-card">
+                <div class="main-card-content">
+                    <h2>Mövenpick Hotel.</h2>
+                    <p>– a luxurious 5-star hotel on the shores of the Gulf of Thailand. Spacious rooms with sea views, a large lagoon-style pool, gourmet restaurants, and free Wi-Fi.</p>
+                </div>
+                <img src="image/1scrMain.png" alt="Hotel" class="main-card-img">
+            </div>
+            
+            <button class="btn" onclick="openScreen('screen-services')">View services</button>
+            
+            <div class="hint-card">
+                <img src="image/1scrDown.png" alt="Hint">
+                <p>If you want to view services, click on the "View services" button.</p>
+            </div>
+        </section>
+
+        <section id="screen-services" class="screen">
+            <button class="btn-back" onclick="openScreen('screen-main')">← Back</button>
+            
+            <div class="service-item">
+                <div class="service-row">
+                    <div class="service-img-box"><img src="image/2scr1.png" alt="BBQ"></div>
+                    <div class="service-text-box">
+                        <h3>BBQ Dinner</h3>
+                        <p>In-Villa Private BBQ Dinner was offered here — a barbecue dinner right in the guest's villa.</p>
+                    </div>
+                </div>
+                <button class="btn" onclick="openScreen('screen-bbq')">View</button>
+            </div>
+
+            <div class="service-item">
+                <div class="service-row">
+                    <div class="service-img-box"><img src="image/2scr2.png" alt="SPA"></div>
+                    <div class="service-text-box">
+                        <h3>SPA Relax</h3>
+                        <p>The Mövenpick hotel chain offers first-class spa complexes (The Wave SPA).</p>
+                    </div>
+                </div>
+                <button class="btn" onclick="openScreen('screen-spa')">View</button>
+            </div>
+
+            <div class="service-item">
+                <div class="service-row">
+                    <div class="service-img-box"><img src="image/2scr3.png" alt="Transfer"></div>
+                    <div class="service-text-box">
+                        <h3>Airport Transfer</h3>
+                        <p>Mövenpick Myth Hotel offers a direct transfer from the International Airport.</p>
+                    </div>
+                </div>
+                <button class="btn" onclick="openScreen('screen-transfer')">View</button>
+            </div>
+
+            <div class="service-item">
+                <div class="service-row">
+                    <div class="service-img-box"><img src="image/2scr3.png" alt="Kids Club"></div>
+                    <div class="service-text-box">
+                        <h3>Kids Club</h3>
+                        <p>Kids Club is designed for children aged 4 to 12. It is a spacious, bright room.</p>
+                    </div>
+                </div>
+                <button class="btn" onclick="openScreen('screen-kids')">View</button>
+            </div>
+        </section>
+
+        <section id="screen-bbq" class="screen">
+            <button class="btn-back" onclick="openScreen('screen-services')">← Back to services</button>
+            <div class="detail-header">
+                <h1>BBQ Dinner</h1>
+                <img src="image/2scr4.png" alt="BBQ">
+            </div>
+            <div class="detail-desc-box">
+                <p>Guests could choose a full barbecue service or rent a Weber electric grill and cook their own meals. The culinary team offered a selection of menus.</p>
+            </div>
+            <div class="detail-cost-box">
+                <p>The admission costs - 40 €</p>
+            </div>
+            <button class="btn" onclick="goToForm('BBQ Dinner')">Book</button>
+        </section>
+
+        <section id="screen-spa" class="screen">
+            <button class="btn-back" onclick="openScreen('screen-services')">← Back to services</button>
+            <div class="detail-header">
+                <h1>SPA Relax</h1>
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="SPA">
+            </div>
+            <div class="detail-desc-box">
+                <p>Welcome to the Mövenpick Hotel spa, which will enchant you with, among other things, a swimming pool and an exceptional water massage area.</p>
+            </div>
+            <div class="detail-cost-box">
+                <p>The admission costs - 23 €</p>
+            </div>
+            <button class="btn" onclick="goToForm('SPA Relax')">Book</button>
+        </section>
+
+        <section id="screen-transfer" class="screen">
+            <button class="btn-back" onclick="openScreen('screen-services')">← Back to services</button>
+            <div class="detail-header">
+                <h1>Airport Transfer</h1>
+                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=600&q=80" alt="Transfer">
+            </div>
+            <div class="detail-desc-box">
+                <p>For travelers seeking a more personalized and flexible arrival experience, Mövenpick offers a comprehensive range of private transfer services.</p>
+            </div>
+            <div class="detail-cost-box">
+                <p>The admission costs - free</p>
+            </div>
+            <button class="btn" onclick="goToForm('Airport Transfer')">Book</button>
+        </section>
+
+        <section id="screen-kids" class="screen">
+            <button class="btn-back" onclick="openScreen('screen-services')">← Back to services</button>
+            <div class="detail-header">
+                <h1>Kids Club</h1>
+                <img src="https://images.unsplash.com/photo-1566416162386-3023021f1599?auto=format&fit=crop&w=600&q=80" alt="Kids Club">
+            </div>
+            <div class="detail-desc-box">
+                <p>The Kids Club at Mövenpick is the perfect place for you to relax while your children have fun. You have come to the right place to share unforgettable moments.</p>
+            </div>
+            <div class="detail-cost-box">
+                <p>The admission costs - free</p>
+            </div>
+            <button class="btn" onclick="goToForm('Kids Club')">Book</button>
+        </section>
+
+        <section id="screen-form" class="screen form-bg">
+            <button class="btn-back" onclick="openScreen('screen-services')">← Cancel</button>
+            <div class="form-header">
+                <h2>Application</h2>
+            </div>
+            <form id="booking-form">
+                <div class="input-group">
+                    <input type="text" id="room-number" placeholder="Your number room:" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="service-name" placeholder="Service:" readonly>
+                </div>
+                <div class="input-group counter-group">
+                    <label>Guests:</label>
+                    <div class="counter">
+                        <button type="button" onclick="changeGuests(-1)">-</button>
+                        <input type="number" id="guests-count" value="1" readonly>
+                        <button type="button" onclick="changeGuests(1)">+</button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <textarea id="comment" placeholder="Your comment:" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn form-btn">to send</button>
+            </form>
+        </section>
+
+        <section id="screen-success" class="screen form-bg">
+            <div class="success-logo">
+                <h2>MÖVENPICK</h2>
+                <p>HOTELS & RESORTS</p>
+            </div>
+            <div class="success-card">
+                <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=150&q=80" alt="Success Image" class="success-img">
+                <button type="button" class="btn" onclick="openScreen('screen-services')">OK</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
